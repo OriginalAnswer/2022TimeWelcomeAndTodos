@@ -4,17 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Home</title>
 </head>
 <body>
     <section class="times">
-        <div class="time"></div>
-        <div class="date"></div>
+        <h1 id="time"></h1>
+        <h2 id="today"></h2>
     </section>
     <section class="hi"></section>
     <section class="toDo">
-        <p id="letter"></p>
+        <p id="letter">What you gonna do?</p>
         <div class="todos"></div>
     </sectionc>
+
+    <script type="text/javascript">
+        // Time & Date--------------------------------------------------
+        const time = document.querySelector('h1#time');
+        function getTime(){
+            const date = new Date();
+            const hours = String(date.getHours()).padStart(2,"0");
+            const minutes = String(date.getMinutes()).padStart(2,"0");
+            const seconds = String(date.getSeconds()).padStart(2,"0");
+            time.innerText = `${hours}:${minutes}:${seconds}`;
+        }
+        const today = document.querySelector('h2#today');
+        const wArr = new Array('Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday');
+        const mArr = new Array('January','February','March','April','May','June','July','August','September','October','November','December');
+        function getDate(){
+            const date = new Date();
+            const d = String(date.getDate());
+            const m = date.getMonth();
+            const y = String(date.getFullYear());
+            const dy = String(date.getDay());
+            today.innerText = `${d}. ${mArr[m]}. ${y}. ${wArr[dy]}`;
+        }
+        getTime();
+        getDate();
+        setInterval(getTime, 1000);
+        // Date---------------------------------------------------
+    </script>
 </body>
 </html>
