@@ -1,13 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Gowun+Batang&family=Quicksand&display=swap");
-/* font-family: 'Do Hyeon', sans-serif;
-font-family: 'Gowun Batang', serif;
-font-family: 'Quicksand', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Jua&family=Nanum+Gothic&family=Noto+Sans+KR&family=Quicksand&display=swap");
+/* font-family: 'Quicksand','Jua','Nanum Gothic','Noto Sans KR' */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   text-decoration: none;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Quicksand", "Jua", "Nanum Gothic", "Noto Sans KR", sans-serif;
 }
 body {
   background-size: cover;
@@ -27,6 +25,9 @@ body {
     rgb(255, 220, 107)
   );
   color: rgba(139, 69, 19, 0.644);
+}
+.hidden {
+  display: none;
 }
 section:not(.todo) {
   /* background-color: #aaa; */
@@ -56,9 +57,18 @@ section:not(.todo) {
   font-weight: 600;
 }
 .todo input {
-  margin-top: 10px;
+  margin-top: 20px;
   width: 100%;
-  border-bottom: solid 1px inherit;
+  border: none;
+  font-size: 1.5rem;
+  background-color: rgba(255, 255, 255, 0);
+  outline: none;
+  color: inherit;
+  text-align: center;
+  font-family: inherit;
+}
+.todo input:not([type="submit"]) {
+  border-bottom: 2px solid rgba(88, 38, 5, 0.247);
 }
 
 @media (max-width: 700px) {
