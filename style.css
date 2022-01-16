@@ -1,23 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Gowun+Batang&family=Quicksand&display=swap");
+/* font-family: 'Do Hyeon', sans-serif;
+font-family: 'Gowun Batang', serif;
+font-family: 'Quicksand', sans-serif; */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   text-decoration: none;
+  font-family: "Quicksand", sans-serif;
 }
 body {
   background-size: cover;
   background-position: center;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-items: center;
+  color: black;
+  text-align: center;
 }
-section {
-  background-color: #aaa;
-  position: relative;
-  /* margin: auto; */
+section:not(.todo) {
+  /* background-color: #aaa; */
+  margin-bottom: 15px;
 }
 .times {
   display: flex;
@@ -26,5 +32,17 @@ section {
   justify-items: center;
 }
 #time {
-  font-size: 7em;
+  font-size: 10em;
+}
+#date {
+  width: 100%;
+}
+#greeting {
+  font-size: 2.8em;
+  font-weight: bold;
+}
+@media (max-width: 700px) {
+  #time {
+    font-size: 6em;
+  }
 }
