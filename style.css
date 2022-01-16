@@ -7,24 +7,26 @@
   text-decoration: none;
   font-family: "Quicksand", "Jua", "Nanum Gothic", "Noto Sans KR", sans-serif;
 }
+::-webkit-scrollbar {
+  display: none;
+}
+html,
 body {
-  background-size: cover;
+  width: 100%;
+  height: 100%;
+  -ms-overflow-style: none;
+  text-align: center;
+  color: black;
+}
+.screen {
   background-position: center;
-  width: 100vw;
-  height: 100vh;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: black;
-  text-align: center;
-  background-image: linear-gradient(
-    135deg,
-    rgb(245, 194, 194),
-    rgb(255, 255, 255),
-    rgb(255, 220, 107)
-  );
-  color: rgba(139, 69, 19, 0.644);
+  width: 100%;
+  height: 100%;
 }
 .hidden {
   display: none;
