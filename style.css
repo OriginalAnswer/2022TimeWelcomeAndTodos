@@ -6,6 +6,8 @@
   padding: 0;
   text-decoration: none;
   font-family: "Quicksand", "Jua", "Nanum Gothic", "Noto Sans KR", sans-serif;
+  list-style-position: inside;
+  /* list-style-type:disc */
 }
 ::-webkit-scrollbar {
   display: none;
@@ -57,9 +59,8 @@ section:not(.todo) {
   font-size: 1.35em;
   font-weight: 600;
 }
-
 .todo input {
-  margin-top: 20px;
+  margin: 20px auto;
   width: 100%;
   border: none;
   font-size: 1.5rem;
@@ -71,6 +72,20 @@ section:not(.todo) {
 }
 .todo input:not([type="submit"]) {
   border-bottom: 2px solid rgba(88, 38, 5, 0.247);
+}
+
+li{
+  padding: 10px 25px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.041);
+  font-size: 2em; 
+  border-radius: 50px;
+  align-items: center;
+}
+i{
+  margin-left: 20px;
 }
 
 @media (max-width: 700px) {
