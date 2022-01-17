@@ -58,6 +58,9 @@ section:not(.todo) {
   font-size: 1.35em;
   font-weight: 600;
 }
+.todo{
+  width: 100%;
+}
 .todo input {
   margin-top: 20px;
   width: 100%;
@@ -85,7 +88,7 @@ section:not(.todo) {
   #greeting {
     font-size: 2em;
   }
-  .todo{
+  #todoInput{
     width: 50%;
   }
   #letter {
