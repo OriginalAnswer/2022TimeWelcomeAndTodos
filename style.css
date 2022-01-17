@@ -57,9 +57,7 @@ section:not(.todo) {
   font-size: 1.35em;
   font-weight: 600;
 }
-.todo{
-  width: 100%;
-}
+
 .todo input {
   margin-top: 20px;
   width: 100%;
