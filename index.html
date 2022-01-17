@@ -110,7 +110,7 @@
         function deleteTodo(e){
             const li = event.target.parentElement;
             li.remove();
-            todosArr = todosArr.filter(a => a.id == parseInt(li.id));
+            todosArr = todosArr.filter(a => a.id !== parseInt(li.id));
             saveTodo();
         }
         todoForm.addEventListener('submit', todoSubmit);
