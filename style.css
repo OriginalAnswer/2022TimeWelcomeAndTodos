@@ -75,7 +75,7 @@ section:not(.todo) {
 }
 
 li{
-  padding: 10px 25px;
+  padding: 5px 25px;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -83,6 +83,7 @@ li{
   font-size: 2em; 
   border-radius: 50px;
   align-items: center;
+  margin-bottom: 10px;
 }
 i{
   margin-left: 20px;
