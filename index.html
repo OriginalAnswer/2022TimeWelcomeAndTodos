@@ -19,7 +19,7 @@
             <form id="todoForm">
                 <input id="todoInput" type="text">
             </form>
-            <div class="todos">
+            <div id="todos">
                 <ul id="todosList"></ul>
             </div>
         </section>
@@ -76,29 +76,48 @@
         //print
         const todoInput = document.querySelector('#todoInput');
         const todoForm = document.querySelector('#todoForm');
+        const todoList = document.querySelector('#todoList');
         let todosArr = [];
         const TODOS_KEY = 'todos';
-        function todoSubmit(e){
-            e.preventDefault();
-            const newtodo = todoInput.value;
-            todosArr.push(newtodo);
-            saveTodo();
-            printTodo();
-        }
         function saveTodo(){
             localStorage.setItem(TODOS_KEY, JSON.stringify(todosArr));
         }
-        function printTodo(newtodo){
+        function todoSubmit(e){
+            e.preventDefault();
+            const newtodo = todoInput.value;
+            todoInput.value = "";
+            const newtodoObj = {
+                text:newtodo,
+                id:Date.now(),
+            }
+            todosArr.push(newtodoObj);
+            printTodo(newtodoObj);
+            saveTodo();
+        }
+        
+        function printTodo(n){
             const li = document.createElement('li');
-            const span = document.createElement('span');
+            li.id = n.id
+            const span = document.createElement('span')
+            span.innerText = n.text;
             const btn = document.createElement('butten');
+            btn.innerText = 'X';
             btn.addEventListener("click", deleteTodo);
-            
+            li.appendChild(span);
+            li.appendChild(btn);
+            todoList.appendChild(li);
         }
         function deleteTodo(){
-
+            
         }
         todoForm.addEventListener('submit', todoSubmit);
+        const savedTodo = localStorage.getItem(TODOS_KEY);
+        if(savedTodo !== null){
+            console.log(savedTodo);
+            const parsedTodos = JSON.parse(savedTodo);
+            todos = parsedTodos;
+            parsedTodos.forEach(printTodo);
+        }
     </script>
 </body>
 </html>
