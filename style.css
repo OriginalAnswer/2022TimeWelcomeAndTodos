@@ -99,7 +99,7 @@ i{
   margin-left: 20px;
 }
 /*  */
-@media (max-width: 700px) {
+@media (max-width: 700px ),(max-height: 700px) {
   #time {
     font-size: 4.5em;
   }
@@ -128,15 +128,15 @@ i{
   /*  */
   .times{
     justify-content: space-between;
-    height: 60%;
     width: 50%;
-    padding: 40px 5px;
+    padding: 0 5px;
   }
   #time{
     font-size: 4em;
   }
   #date{
     font-size: 1em;
+    margin: 20px;
   }
   #greeting{
     font-size: 1.8em;
