@@ -37,7 +37,7 @@ body {
   
 }
 .fixdiv{ z-index: -100; width:100vw; height:100vh; position:fixed; top:0; left:0;}
-.screen {
+.screen {z-index:1;
   background-position: center;
   background-size: cover;
   display: flex;
