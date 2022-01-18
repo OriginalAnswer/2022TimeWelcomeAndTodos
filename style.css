@@ -18,6 +18,7 @@ body {
   height: 100%;
   -ms-overflow-style: none;
   text-align: center;
+  transition: background-image 3s linear;
 }
 .screen {
   background-position: center;
@@ -74,10 +75,15 @@ section:not(.todo) {
 /* .todo input:not([type="submit"]) {
 } */
 #todoInput{
-  /* border-bottom: 2px solid rgba(88, 38, 5, 0.247); */
+  border-bottom: 2px solid rgba(88, 38, 5, 0.247);
   /* border-bottom: 2px solid rgba(255, 255, 255, 0.566); */
 }
 
+ul{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
 li{
   padding: 5px 25px;
   display: flex;
@@ -115,15 +121,16 @@ i{
 @media (max-height: 550px) {
   .screen{
     position: absolute;
-    padding: 25px;
     flex-direction: row;
+    justify-content: space-between;
+    padding: 0 30px;
   }
   /*  */
   .times{
     justify-content: space-between;
     height: 60%;
     width: 50%;
-    margin: 0 1px;
+    padding: 40px 5px;
   }
   #time{
     font-size: 4em;
@@ -135,11 +142,15 @@ i{
     font-size: 1.8em;
   }
   /*  */
+  .todo{
+    padding: 0 20px;
+  }
   #todoInput{
     width: 55%;
+    font-size: 1.2em;
   }
-  /* .todo input:not([type="submit"]) {
-  } */
-  /*  */
-  
+  li{
+    font-size: 1.2em;
+    width: 80%;
+  }
 }

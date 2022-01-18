@@ -58,9 +58,6 @@
                 greeting.innerText = `Good Morning😊`;
                 document.body.style.color = 'rgba(139, 69, 19, 0.644)';
                 document.body.style.backgroundImage = 'linear-gradient(135deg,rgb(245, 194, 194),rgb(255, 255, 255),rgb(255, 220, 107))';
-                document.getElementById('#todoInput').setAttribute("style",(
-                    "border-bottom = 2px solid rgba(255, 255, 255, 0.566)"
-                ));
             } else if (h < 18) {
                 greeting.innerText = `Good Afternoon😊`;
                 document.body.style.color = 'rgb(150, 0, 100)';
@@ -69,6 +66,9 @@
                 greeting.innerText = `Good Evening😊`;
                 document.body.style.backgroundImage = 'linear-gradient(135deg,rgb(1, 13, 68),rgb(51, 31, 141),rgb(135, 0, 168))';
                 document.body.style.color = '#fff';
+                // todoInput.setAttribute("style",(
+                //     "border-bottom = 2px solid rgba(255, 255, 255, 0.566)"
+                // ));
             }
         }
         setInterval(greet,1000);
