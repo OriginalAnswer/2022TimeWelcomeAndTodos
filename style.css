@@ -51,6 +51,7 @@ section:not(.todo) {
   letter-spacing: 10px;
   width: 100%;
 }
+/*  */
 #greeting {
   font-size: 4.5em;
   font-weight: bold;
@@ -70,8 +71,11 @@ section:not(.todo) {
   text-align: center;
   font-family: inherit;
 }
-.todo input:not([type="submit"]) {
-  border-bottom: 2px solid rgba(88, 38, 5, 0.247);
+/* .todo input:not([type="submit"]) {
+} */
+#todoInput{
+  /* border-bottom: 2px solid rgba(88, 38, 5, 0.247); */
+  /* border-bottom: 2px solid rgba(255, 255, 255, 0.566); */
 }
 
 li{
@@ -88,7 +92,7 @@ li{
 i{
   margin-left: 20px;
 }
-
+/*  */
 @media (max-width: 700px) {
   #time {
     font-size: 4.5em;
@@ -107,4 +111,35 @@ i{
   #letter {
     font-size: .95em;
   }
+}
+@media (max-height: 550px) {
+  .screen{
+    position: absolute;
+    padding: 25px;
+    flex-direction: row;
+  }
+  /*  */
+  .times{
+    justify-content: space-between;
+    height: 60%;
+    width: 50%;
+    margin: 0 1px;
+  }
+  #time{
+    font-size: 4em;
+  }
+  #date{
+    font-size: 1em;
+  }
+  #greeting{
+    font-size: 1.8em;
+  }
+  /*  */
+  #todoInput{
+    width: 55%;
+  }
+  /* .todo input:not([type="submit"]) {
+  } */
+  /*  */
+  
 }

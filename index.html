@@ -12,8 +12,8 @@
         <section class="times">
             <h1 id="time"></h1>
             <h2 id="date"></h2>
+            <section id="greeting"></section>
         </section>
-        <section id="greeting"></section>
         <section class="todo">
             <p id="letter">What is your main focus for today?</p>
             <form id="todoForm">
@@ -58,6 +58,9 @@
                 greeting.innerText = `Good Morning😊`;
                 document.body.style.color = 'rgba(139, 69, 19, 0.644)';
                 document.body.style.backgroundImage = 'linear-gradient(135deg,rgb(245, 194, 194),rgb(255, 255, 255),rgb(255, 220, 107))';
+                document.getElementById('#todoInput').setAttribute("style",(
+                    "border-bottom = 2px solid rgba(255, 255, 255, 0.566)"
+                ));
             } else if (h < 18) {
                 greeting.innerText = `Good Afternoon😊`;
                 document.body.style.color = 'rgb(150, 0, 100)';
