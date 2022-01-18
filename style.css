@@ -18,7 +18,7 @@ body {
   height: 100%;
   -ms-overflow-style: none;
   text-align: center;
-  transition: background-image 10s linear;
+  color: rgba(255, 255, 255, 0);
 }
 .screen {
   background-position: center;
