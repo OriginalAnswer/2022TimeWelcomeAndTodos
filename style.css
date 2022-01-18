@@ -33,9 +33,6 @@ body {
 .hidden {
   display: none;
 }
-section{
-  margin: auto;
-}
 .times {
   display: flex;
   flex-direction: column;
@@ -148,5 +145,8 @@ i{
   li{
     font-size: 1.2em;
     width: 80%;
-  }
+  }  
+section{
+  margin: auto;
+}
 }
