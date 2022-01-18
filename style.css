@@ -20,9 +20,9 @@ body {
   -ms-overflow-style: none;
   text-align: center;
   color: rgba(255, 255, 255, 0);
-  animation: change 10s ease-in-out infinite;
+  animation: change 8s ease-in-out infinite;
   background-position: 100% 500%;
-  background-size: 500% 100%;
+  background-size: 400% 100%;
 }
 @keyframes change {
   0%{
@@ -73,6 +73,7 @@ body {
   font-size: 1.35em;
   font-weight: 600;
 }
+.todo{padding:10px;}
 .todo input {
   margin: 20px auto;
   width: 100%;
