@@ -18,7 +18,7 @@ body {
   height: 100%;
   -ms-overflow-style: none;
   text-align: center;
-  transition: background-image 3s linear;
+  transition: background-image 10s linear;
 }
 .screen {
   background-position: center;
@@ -33,9 +33,8 @@ body {
 .hidden {
   display: none;
 }
-section:not(.todo) {
-  /* background-color: #aaa; */
-  margin-bottom: 15px;
+section{
+  margin: auto;
 }
 .times {
   display: flex;
@@ -72,11 +71,8 @@ section:not(.todo) {
   text-align: center;
   font-family: inherit;
 }
-/* .todo input:not([type="submit"]) {
-} */
 #todoInput{
   border-bottom: 2px solid rgba(88, 38, 5, 0.247);
-  /* border-bottom: 2px solid rgba(255, 255, 255, 0.566); */
 }
 
 ul{
@@ -128,7 +124,7 @@ i{
   /*  */
   .times{
     justify-content: space-between;
-    width: 50%;
+    /* width: 50%; */
     padding: 0 5px;
   }
   #time{
