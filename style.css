@@ -146,7 +146,7 @@ i{
   }
 }
 
-@media (max-width:1200px)and (max-height: 700px) {
+@media (max-width:1200px)and (max-height: 825px) {
   #time {
     font-size: 4.5em;
   }
@@ -168,9 +168,9 @@ i{
     font-size: 1.5em;
   }
 }
-/* 
-@media (max-height: 550px)and(max-width:640px) {
+
+@media (max-width:300px) {
   li{
-    font-size: .5em;
+    font-size: 1em;
   }
-} */
+}
