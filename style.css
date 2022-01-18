@@ -20,7 +20,7 @@ body {
   -ms-overflow-style: none;
   text-align: center;
   color: rgba(255, 255, 255, 0);
-  animation: change 8s ease-in-out infinite;
+  animation: change 6s ease-in-out infinite;
   background-position: 100% 500%;
   background-size: 400% 100%;
 }
