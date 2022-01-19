@@ -10,6 +10,7 @@
 <body>
 
     <div class="screen">
+
         <section class="times">
             <h1 id="time"></h1>
             <h2 id="date"></h2>
@@ -24,6 +25,7 @@
                 <ul id="todoList"></ul>
             </div>
         </section>
+<div class = "fixdiv"></div>
     </div>
 
     <script type="text/javascript">
@@ -138,7 +140,6 @@
         todoForm.addEventListener('submit', todoSubmit);
         const savedTodo = localStorage.getItem(TODOS_KEY);
         if(savedTodo !== null){
-            console.log(savedTodo);
             const parsedTodos = JSON.parse(savedTodo);
             todos = parsedTodos;
             parsedTodos.forEach(printTodo);
