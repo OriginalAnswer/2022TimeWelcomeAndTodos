@@ -107,15 +107,21 @@ li{
 i{
   margin-left: 20px;
 }
+
+
+
 /*  */
-@media (max-height: 550px) {
+
+
+
+
+/* @media (max-height: 550px) {
   .screen{
     position: absolute;
     flex-direction: row;
     justify-content: space-between;
     padding: 0 30px;
   }
-  /*  */
   .times{
     justify-content: space-between;
     padding: 0 5px;
@@ -130,7 +136,6 @@ i{
   #greeting{
     font-size: 1.8em;
   }
-  /*  */
   .todo{
     padding: 0 20px;
   }
@@ -173,4 +178,65 @@ i{
   li{
     font-size: 1em;
   }
+} */
+/*orientation:portrait*/
+/*orientation:landscape*/
+@media (orientation:portrait) {
+  #time {
+    font-size: 4.5em;
+  }
+  #date {
+    width: 100%;
+    font-size: 1em;
+    letter-spacing: 5px;
+  }
+  #greeting {
+    font-size: 2em;
+  }
+  #todoInput{
+    width: 80%;
+  }
+  #letter {
+    font-size: .95em;
+  }
+  li{
+    font-size: 1.5em;
+  }
+}
+@media (orientation:landscape) {
+  .screen{
+    position: absolute;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+    padding: 0 30px;
+  }
+  .times{
+    justify-content: space-between;
+    padding: 0 5px;
+  }
+  #time{
+    font-size: 4em;
+  }
+  #date{
+    font-size: 1em;
+    margin: 20px;
+  }
+  #greeting{
+    font-size: 1.8em;
+  }
+  .todo{
+    padding: 0 20px;
+  }
+  #todoInput{
+    width: 55%;
+    font-size: 1.2em;
+  }
+  li{
+    font-size: 1.5em;
+  }  
+  section{
+    margin: auto;
+  } 
 }
