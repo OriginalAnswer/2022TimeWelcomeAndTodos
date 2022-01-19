@@ -20,9 +20,9 @@ body {
   -ms-overflow-style: none;
   text-align: center;
   color: rgba(255, 255, 255, 0);
-  animation: change 10s ease-in-out infinite;
+  animation: change 6s ease-in-out infinite;
   background-position: 100% 500%;
-  background-size: 500% 100%;
+  background-size: 400% 100%;
 }
 @keyframes change {
   0%{
@@ -36,7 +36,8 @@ body {
   }
   
 }
-.screen {
+.fixdiv{ z-index: -100; width:100%; height:100%; position:fixed; top:0; left:0;}
+.screen {z-index:1;
   background-position: center;
   background-size: cover;
   display: flex;
@@ -73,6 +74,7 @@ body {
   font-size: 1.35em;
   font-weight: 600;
 }
+.todo{padding:10px;}
 .todo input {
   margin: 20px auto;
   width: 100%;
@@ -235,8 +237,5 @@ i{
   }
   li{
     font-size: 1.5em;
-  }  
-  section{
-    margin: auto;
-  } 
+  }
 }

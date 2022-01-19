@@ -8,7 +8,9 @@
     <title>Welcome</title>
 </head>
 <body>
+
     <div class="screen">
+
         <section class="times">
             <h1 id="time"></h1>
             <h2 id="date"></h2>
@@ -23,6 +25,7 @@
                 <ul id="todoList"></ul>
             </div>
         </section>
+<div class = "fixdiv"></div>
     </div>
 
     <script type="text/javascript">
@@ -60,7 +63,7 @@
             if(h<4){
                 greeting.innerText = `Good Night🌙`;
                 document.body.style.transition = 'background 2s linear';
-                document.body.style.color = 'rgba(139, 69, 19, 0.744)';
+                document.body.style.color = '#fff';
                 document.body.style.backgroundImage = 'linear-gradient(135deg,rgb(1, 13, 68),rgb(51, 31, 141),rgb(135, 0, 168))';
                 document.getElementById('todoInput').style.borderColor = 'rgba(255, 255, 255, 0.566)';
             }else if(h<7){
@@ -82,9 +85,9 @@
                 // document.body.style.animation = 'change 10s ease-in-out infinite';
             } else {
                 document.body.style.transition = 'background 2s linear';
-                greeting.innerText = `Good Evening🌇`;
+                greeting.innerText = `Good Evening🌙`;
                 document.body.style.backgroundImage = 'linear-gradient(135deg,rgb(1, 13, 68),rgb(51, 31, 141),rgb(135, 0, 168))';
-                document.body.style.color = 'rgba(139, 69, 19, 0.744)';
+                document.body.style.color = '#fff';
                 document.getElementById('todoInput').style.borderColor = 'rgba(255, 255, 255, 0.566)';
             }
         }
