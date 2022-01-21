@@ -112,100 +112,30 @@ i {
 
 /*  */
 
-/* @media (max-height: 550px) {
-  .screen{
-    position: absolute;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0 30px;
+@media screen and (orientation: portrait) {
+  #time {
+    font-size: 4.5em;
   }
-  .times{
-    justify-content: space-between;
-    padding: 0 5px;
-  }
-  #time{
-    font-size: 4em;
-  }
-  #date{
+  #date {
+    width: 100%;
     font-size: 1em;
-    margin: 20px;
+    letter-spacing: 5px;
   }
-  #greeting{
-    font-size: 1.8em;
+  #greeting {
+    font-size: 2em;
   }
-  .todo{
-    padding: 0 20px;
+  #todoInput {
+    width: 80%;
   }
-  #todoInput{
-    width: 55%;
-    font-size: 1.2em;
+  #letter {
+    font-size: 0.95em;
   }
-  li{
+  li {
     font-size: 1.5em;
-  }  
-  section{
-    margin: auto;
   }
 }
-*/
 
-/* @media (max-height: 800px) {
-  .screen {
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-  }
-  #time {
-    font-size: 4.5em;
-  }
-  #date {
-    width: 100%;
-    font-size: 1em;
-    letter-spacing: 5px;
-  }
-  #greeting {
-    font-size: 2em;
-  }
-  #todoInput {
-    width: 80%;
-  }
-  #letter {
-    font-size: 0.95em;
-  }
-  li {
-    font-size: 1.5em;
-  }
-} */
-/*orientation:portrait*/
-/*orientation:landscape*/
-@media (orientation: portrait) {
-  #time {
-    font-size: 4.5em;
-  }
-  #date {
-    width: 100%;
-    font-size: 1em;
-    letter-spacing: 5px;
-  }
-  #greeting {
-    font-size: 2em;
-  }
-  #todoInput {
-    width: 80%;
-  }
-  #letter {
-    font-size: 0.95em;
-  }
-  li {
-    font-size: 1.5em;
-  }
-}
-@media (orientation: landscape) {
+@media screen and (max-width: 930px) and (orientation: landscape) {
   .screen {
     position: absolute;
     flex-direction: row;
@@ -236,6 +166,28 @@ i {
   #todoInput {
     width: 55%;
     font-size: 1.2em;
+  }
+  li {
+    font-size: 1.5em;
+  }
+}
+@media screen and (max-width: 1445px) and (orientation: landscape) {
+  #time {
+    font-size: 6em;
+  }
+  #date {
+    width: 100%;
+    font-size: 1.5em;
+    letter-spacing: 5px;
+  }
+  #greeting {
+    font-size: 2.5em;
+  }
+  #todoInput {
+    width: 100%;
+  }
+  #letter {
+    font-size: 0.95em;
   }
   li {
     font-size: 1.5em;
