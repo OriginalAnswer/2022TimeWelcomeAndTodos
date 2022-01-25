@@ -102,10 +102,16 @@
         const todoInput = document.querySelector('#todoInput');
         const todoForm = document.querySelector('#todoForm');
         const todoList = document.querySelector('#todoList');
-        let todosArr = [];
         const TODOS_KEY = 'todos';
+        let todosArr = [];
         function saveTodo(){
             localStorage.setItem(TODOS_KEY, JSON.stringify(todosArr));
+        }
+        function deleteTodo(e){
+            const li = event.target.parentElement;
+            li.remove();
+            todosArr = todosArr.filter(a => a.id !== parseInt(li.id));
+            saveTodo();
         }
         function todoSubmit(e){
             e.preventDefault();
@@ -114,7 +120,7 @@
             const newtodoObj = {
                 text:newtodo,
                 id:Date.now(),
-            };
+            }
             todosArr.push(newtodoObj);
             printTodo(newtodoObj);
             saveTodo();
@@ -131,12 +137,6 @@
             li.appendChild(span);
             li.appendChild(btn);
             todoList.appendChild(li);
-        }
-        function deleteTodo(e){
-            const li = event.target.parentElement;
-            li.remove();
-            todosArr = todosArr.filter(a => a.id !== parseInt(li.id));
-            saveTodo();
         }
         todoForm.addEventListener('submit', todoSubmit);
         const savedTodo = localStorage.getItem(TODOS_KEY);
