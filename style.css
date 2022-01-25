@@ -88,6 +88,8 @@ body {
   color: inherit;
   text-align: center;
   font-family: inherit;
+  max-width: 100%;
+  overflow: hidden;
 }
 #todoInput {
   border-bottom: 2px solid rgba(88, 38, 5, 0.247);
@@ -102,12 +104,16 @@ li {
   padding: 5px 25px;
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  max-width: 95%;
   background-color: rgba(0, 0, 0, 0.041);
   font-size: 2em;
   border-radius: 50px;
   align-items: center;
   margin-bottom: 10px;
+}
+li span {
+  /* width: 100%; */
+  /* text-align: center; */
 }
 i {
   margin-left: 20px;
