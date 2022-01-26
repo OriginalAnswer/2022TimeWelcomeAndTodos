@@ -7,7 +7,7 @@
 ::-webkit-scrollbar {display: }
 html,
 body {
-  position: fixed;
+  position: relative;
   width: 100%;
   height: 100%;
   -ms-overflow-style: none;
@@ -23,26 +23,40 @@ body {
   100% {background-position: 0 50%;}
 }
 .screen {
-  position: relative;
-  background-position: center;
-  background-size: cover;
+  position: absolute;
+  top: 0;left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
-.times {display: flex;flex-direction: column;align-items: center;justify-items: center;}
+.times {margin-top: auto;;display: flex;flex-direction: column;align-items: center;justify-items: center;}
 #time {font-size: 10em;margin: 15px;}
 #date {font-size: 1.5em;font-weight: lighter;letter-spacing: 10px;width: 100%;margin-bottom: 15px;}
-/*  */
 #greeting {font-size: 4.5em;font-weight: bold;margin-bottom: 10px;}
-#letter {font-size: 1.35em;font-weight: 600;}
-.todo {padding: 10px;}
-.todo input {
-  margin: 20px auto;
+.todo {
+  margin-bottom: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
+  /* height: 30%; */
+  padding: 0 20px;}
+#letter {font-size: 1.35em;font-weight: 600;}
+#todoForm{
+  width: 90%;
+}
+#todoInput {
+  margin: 20px auto;
+  width: 300px;
   border: none;
   font-size: 1.5rem;
   background-color: rgba(255, 255, 255, 0);
@@ -50,41 +64,42 @@ body {
   color: inherit;
   text-align: center;
   font-family: inherit;
-  max-width: 100%;
   overflow: hidden;
-}
-#todoInput {border-bottom: 2px solid rgba(88, 38, 5, 0.247);}
+  border-bottom: 2px solid rgba(88, 38, 5, 0.247);}
+  #todos{width: 80%;height: auto;;display: flex;}
+  #todoList{margin: auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 
-ul {position: relative;;display: flex;width: 100%;}
-li {
-  padding: 5px 25px;
-  display: flex;
-  justify-content: space-between;
-  max-width: 95%;
-  background-color: rgba(0, 0, 0, 0.041);
+}
+
+.li {
   font-size: 2em;
+  background-color: rgba(0, 0, 0, 0.041);
   border-radius: 50px;
+  margin: 0 2px 10px 10px;
+  padding: 5px 15px;
+  display: flex;
   align-items: center;
-  margin: 0 2px 10px 2px;
 }
 
-i {margin-left: 5px;}
+i {font-size: .6em;margin-left: 15px;}
 
-/*  */
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 @media screen and (orientation: portrait) {
   #time {font-size: 4.5em;}
   #date {width: 100%;font-size: 1em;letter-spacing: 5px;}
   #greeting {font-size: 2em;}
-  #todoInput {width: 80%;}
+  #todoInput {width: 200px;}
   #letter {font-size: 0.95em;}
-  li {font-size: 1.2em;padding: 10px;
-  /* height: 100%;width: 100%; */
-}
-  li>span{text-align: center;}
+  .li {font-size: 1.2em;padding: 10px;}
 }
 
-@media screen and (orientation: landscape) and (max-width: 1100px) {
+@media screen and (orientation: landscape) and (max-width: 14550px) {
   .screen {
     position: fixed;
     flex-direction: row;
@@ -101,25 +116,26 @@ i {margin-left: 5px;}
   #todoInput {width: 55%;font-size: 1.2em;}
   li {font-size: 1.5em;}
 }
-@media screen and (orientation: landscape) and (max-width: 1445px) {
+@media screen and (orientation: landscape) and (max-width: 1445px) and (min-height: 1000px) {
   #time {font-size: 6em;}
   #date {font-size: 1.5em;letter-spacing: 5px;width: 100%;}
   #greeting {font-size: 2.5em;}
-  #todoInput {width: 100%;}
+  #todoInput {width:200px;}
   #letter {font-size: 0.95em;}
-  li {font-size: 1.5em;}
+  .li {font-size: 1.5em;}
 }
-@media screen and (orientation: landscape) and (max-width: 1500px) and (max-height: 700px) {
+@media screen and (orientation: landscape) and (max-width: 1500px) and (max-height: 800px) {
   .screen {position: fixed;flex-direction: row;justify-content: space-between;justify-items: center;align-items: center;padding: 0 30px;}
   .times {margin: auto;padding: 0 5px;justify-content: space-between;}
   .todo {margin: auto;padding: 0 20px;}
+  .li {font-size: 1.2em;padding: 10px;}
 }
 @media screen and (orientation: landscape) and (max-width: 1500px) and (max-height: 500px) {
   .screen {position: fixed;flex-direction: row;justify-content: space-between;justify-items: center;align-items: center;padding: 0 30px;}
   .times {margin: auto;padding: 0 5px;justify-content: space-between; transform: scale(.7);}
   .todo {margin: auto;padding: 0 20px;}
   #todoInput {width: 55%;font-size: 1em;}
-  #todoList{flex-direction: row;}
+  #todoList{display: flex;}
   li {font-size: 1em;padding: 10px;}
   li>span{width: 100%;text-align: center;}
 }

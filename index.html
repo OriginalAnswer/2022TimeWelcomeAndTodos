@@ -20,7 +20,7 @@
                 <input id="todoInput" type="text" required>
             </form>
             <div id="todos">
-                <ul id="todoList"></ul>
+                <div id="todoList"></div>
             </div>
         </section>
     </div>
@@ -127,8 +127,9 @@
         }
         
         function printTodo(n){
-            const li = document.createElement('li');
+            const li = document.createElement('div');
             li.id = n.id;
+            li.classList.add('li');
             const span = document.createElement('span');
             span.innerText = n.text;
             const btn = document.createElement('i');
