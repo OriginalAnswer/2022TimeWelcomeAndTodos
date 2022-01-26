@@ -78,7 +78,10 @@ i {margin-left: 5px;}
   #greeting {font-size: 2em;}
   #todoInput {width: 80%;}
   #letter {font-size: 0.95em;}
-  li {font-size: 1.5em;}
+  li {font-size: 1.2em;padding: 10px;
+  /* height: 100%;width: 100%; */
+}
+  li>span{text-align: center;}
 }
 
 @media screen and (orientation: landscape) and (max-width: 1100px) {
@@ -128,7 +131,7 @@ i {margin-left: 5px;}
   #letter {font-size: 1.35em;font-weight: 600;}
   li {padding: 5px 25px;display: flex;justify-content: space-between;width: 100%;background-color: rgba(0, 0, 0, 0.041);font-size: 2em;border-radius: 50px;align-items: center;margin-bottom: 10px;}
 }
-@media screen and (max-width:510px) and (max-width:510px) {
+@media screen and (max-width:510px) and (max-height:510px) {
   .todo{display: none;}
   #time{margin: 0;}
 }
