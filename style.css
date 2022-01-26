@@ -65,10 +65,10 @@ li {
   font-size: 2em;
   border-radius: 50px;
   align-items: center;
-  margin-bottom: 10px;
+  margin: 0 2px 10px 2px;
 }
 
-i {margin-left: 20px;}
+i {margin-left: 5px;}
 
 /*  */
 
@@ -110,6 +110,15 @@ i {margin-left: 20px;}
   .screen {position: fixed;flex-direction: row;justify-content: space-between;justify-items: center;align-items: center;padding: 0 30px;}
   .times {margin: auto;padding: 0 5px;justify-content: space-between;}
   .todo {margin: auto;padding: 0 20px;}
+}
+@media screen and (orientation: landscape) and (max-width: 1500px) and (max-height: 500px) {
+  .screen {position: fixed;flex-direction: row;justify-content: space-between;justify-items: center;align-items: center;padding: 0 30px;}
+  .times {margin: auto;padding: 0 5px;justify-content: space-between; transform: scale(.7);}
+  .todo {margin: auto;padding: 0 20px;}
+  #todoInput {width: 55%;font-size: 1em;}
+  #todoList{flex-direction: row;}
+  li {font-size: 1em;padding: 10px;}
+  li>span{width: 100%;text-align: center;}
 }
 
 @media screen and (min-width: 1000px) and (min-height: 1500px) {
