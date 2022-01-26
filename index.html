@@ -116,7 +116,7 @@
         function todoSubmit(e){
             e.preventDefault();
             const newtodo = todoInput.value;
-            // todoInput.value = "";
+            todoInput.value = "";
             const newtodoObj = {
                 text:newtodo,
                 id:Date.now(),
