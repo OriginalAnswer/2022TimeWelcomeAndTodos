@@ -63,7 +63,7 @@ body {
   font-family: inherit;
   overflow: hidden;
   border-bottom: 2px solid rgba(88, 38, 5, 0.247);}
-  #todos{width: 80%;height: auto;;display: flex;}
+  #todos{width: 90%;height: auto;;display: flex;}
   #todoList{margin: auto;
     width: 100%;
     display: flex;
