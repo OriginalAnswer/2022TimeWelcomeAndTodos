@@ -4,7 +4,7 @@
   /* list-style-type:disc */
 }
 .hidden {display: none;}
-::-webkit-scrollbar {display: }
+::-webkit-scrollbar {display: none}
 html,
 body {
   position: relative;
@@ -133,7 +133,7 @@ i {font-size: .6em;margin-left: 15px;}
   .screen {flex-direction: row;justify-content: space-between;justify-items: center;align-items: center;padding: 0 30px;}
   .times {margin: auto;padding: 0 5px;justify-content: space-between; transform: scale(.7);}
   .todo {width: 40%;margin: auto;padding: 0 20px;}
-  #todoInput {font-size: 1.2em;}/
+  #todoInput {font-size: 1.2em;}
   .li {font-size: 1em;padding: 10px;}
 }
 
